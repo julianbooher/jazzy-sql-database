@@ -9,7 +9,7 @@ const songRouter = require('./routes/song.router.js');
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/artist', artistRouter);
-app.use('/songs', songRouter);
+app.use('/song', songRouter);
 
 
 app.use(express.static('server/public'));
