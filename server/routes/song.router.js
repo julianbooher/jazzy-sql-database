@@ -6,7 +6,7 @@ const pool = require('../modules/pool');
 router.get('/', (req, res) => {
     console.log(`In /song GET`);
 
-    let queryText = `SELECT * FROM "songs";`;
+    let queryText = `SELECT * FROM songs ORDER BY title ASC;`;
     pool.query(queryText).then((result) => {
         res.send(result.rows);
     }).catch((error) => {
